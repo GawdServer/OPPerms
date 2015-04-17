@@ -1,0 +1,11 @@
+{
+  "name": "OP Perms",
+  "version": "1.0",
+  "mainClass": "tk.coolv1994.plugins.ops.OP",
+  "commands": {
+    "reloadops": "tk.coolv1994.plugins.ops.ReloadCommand"
+  },
+  "events": {
+    "permissions": "tk.coolv1994.plugins.ops.PermManager"
+  }
+}
