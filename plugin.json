@@ -1,6 +1,6 @@
 {
   "name": "OP Perms",
-  "version": "1.0",
+  "version": "1.1",
   "mainClass": "io.github.gawdserver.ops.OP",
   "commands": {
     "reloadops": "io.github.gawdserver.ops.ReloadCommand"
