@@ -1,13 +1,14 @@
-package tk.coolv1994.plugins.ops;
+package io.github.gawdserver.ops;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import tk.coolv1994.gawdapi.perms.PermissionManager;
+import io.github.gawdserver.api.perms.PermissionManager;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.logging.Level;
 
 /**
  * Created by Vinnie on 4/17/2015.
@@ -27,7 +28,7 @@ public class PermManager implements PermissionManager {
     }
 
     public void loadPerms() {
-        System.out.println("[OPs] Loading Operators...");
+        OP.logger.info("Loading Operators...");
         ops.clear();
         JsonParser parser = new JsonParser();
         try {
@@ -36,8 +37,8 @@ public class PermManager implements PermissionManager {
                 JsonObject user = (JsonObject) o;
                 ops.put(user.get("name").getAsString(), user.get("level").getAsInt());
             }
-        } catch (IOException e) {
-            System.out.println("[OPs] Error reading ops.json...\n" + e.getMessage());
+        } catch (IOException ex) {
+            OP.logger.log(Level.SEVERE, "Error reading ops.json.", ex);
         }
     }
 }

@@ -1,0 +1,9 @@
+{
+	"commands": {
+		"reloadops": {
+			"description": "Reload OP-based permissions.",
+			"usage": "!reloadops",
+			"permission": "ops.reload"
+		}
+	}
+}

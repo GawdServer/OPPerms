@@ -1,7 +1,9 @@
-package tk.coolv1994.plugins.ops;
+package io.github.gawdserver.ops;
 
-import tk.coolv1994.gawdapi.perms.Permissions;
-import tk.coolv1994.gawdapi.plugin.Plugin;
+import io.github.gawdserver.api.perms.Permissions;
+import io.github.gawdserver.api.plugin.Plugin;
+
+import java.util.logging.Logger;
 
 /**
  * Created by Vinnie on 2/2/2015.
@@ -13,6 +15,7 @@ import tk.coolv1994.gawdapi.plugin.Plugin;
  * You have all permissions, or none :)
  */
 public class OP implements Plugin {
+    public static final Logger logger = Logger.getLogger("OPPerms");
     private static PermManager manager;
 
     public static PermManager getManager() {
